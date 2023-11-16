@@ -3,4 +3,8 @@ const { argv } = require('process');
 
 let args = argv.slice(2, argv.length);
 
-moveFiles(args);
+try{
+    moveFiles(args);
+} catch (err) {
+    console.log(err);
+}

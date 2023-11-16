@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("node:path");
-const { cwd } = require("process");
 
 function moveFiles(input) {
     if (input.length < 3) {
@@ -30,11 +29,13 @@ function moveFiles(input) {
     
     filenames.forEach(file => {
         if (file_extensions.includes(path.extname(file))) {
-            fs.copyFileSync(source_dir + "\\" +  file, target_dir + "\\" + file);
-            
-            if (fs.existsSync(target_dir + "\\" + file )) {
-                fs.rmSync(source_dir + "\\" +  file);
-                if (!fs.existsSync(source_dir + "\\" +  file)) {
+            let source_path = path.join(source_dir, file);
+            let target_path = path.join(target_dir, file)
+            fs.copyFileSync(source_path, target_path);
+
+            if (fs.existsSync(target_path)) {
+                fs.rmSync(source_path);
+                if (!fs.existsSync(source_path)) {
                     filesMoved = filesMoved + 1;
                 }
             }
