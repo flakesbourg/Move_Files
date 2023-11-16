@@ -15,7 +15,7 @@ node index.js SOURCE_DIRECTORY TARGET_DIRECTORY FILE_EXTENSION [FILE_EXTENSION_1
 ## Tests
 
 The tests are realized via jest and use the **memf** package to create a virtual file system to test the moveFiles function.
-The tests can be run with
+The tests can be run with: <br/>
 ```bash
 npm test
 ```
