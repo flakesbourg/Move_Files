@@ -1,6 +1,7 @@
 # Move Files
 
-A nodeJs project, to move all files with certain file extension, from one directory to another.
+A nodeJs project, to move all files with certain file extension, from one directory to another. <br/>
+**It currently only works on Windows**
 
 
 ## Usage
