@@ -1,7 +1,7 @@
 # Move Files
 
 A nodeJs project, to move all files with certain file extension, from one directory to another. <br/>
-**It currently only works on Windows**
+**It currently runs on every systems where path.join() works**
 
 
 ## Usage
