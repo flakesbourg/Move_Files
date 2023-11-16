@@ -1,0 +1,23 @@
+{
+  "name": "sortingdownloads",
+  "version": "1.0.0",
+  "description": "A NodeJs Project to sort all files in the downloads folder",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config=jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flakesbourg/SortingDownloads.git"
+  },
+  "author": "Alexander Falkenberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flakesbourg/SortingDownloads/issues"
+  },
+  "homepage": "https://github.com/flakesbourg/SortingDownloads#readme",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "memfs": "^4.6.0"
+  }
+}
