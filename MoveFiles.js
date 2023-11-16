@@ -30,9 +30,13 @@ function moveFiles(input) {
     
     filenames.forEach(file => {
         if (file_extensions.includes(path.extname(file))) {
-            fs.renameSync(source_dir + "\\" +  file, target_dir + "\\" + file);
-            if (!fs.existsSync(source_dir + "\\" +  file) && fs.existsSync(target_dir + "\\" + file)) {
-                filesMoved = filesMoved + 1;
+            fs.copyFileSync(source_dir + "\\" +  file, target_dir + "\\" + file);
+            
+            if (fs.existsSync(target_dir + "\\" + file )) {
+                fs.rmSync(source_dir + "\\" +  file);
+                if (!fs.existsSync(source_dir + "\\" +  file)) {
+                    filesMoved = filesMoved + 1;
+                }
             }
         }
     })
